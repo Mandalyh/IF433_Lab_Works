@@ -1,4 +1,4 @@
-package oop_002_Amanda.week02
+package oop_002_Amanda.week02.task1
 
 import java.util.Scanner
 

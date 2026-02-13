@@ -1,4 +1,4 @@
-package oop_002_Amanda.week02
+package oop_002_Amanda.week02.task2
 
 class Hero(
     val name: String,
