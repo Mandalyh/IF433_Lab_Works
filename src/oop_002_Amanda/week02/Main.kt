@@ -16,7 +16,6 @@ fun main() {
     print("Masukkan Lama Pinjam (hari): ")
     var duration = scanner.nextInt()
 
-    // Validasi tidak boleh minus
     if (duration < 0) {
         println("Durasi tidak boleh minus. Diubah menjadi 1 hari.")
         duration = 1
