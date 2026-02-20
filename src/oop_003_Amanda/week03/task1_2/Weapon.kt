@@ -1,4 +1,4 @@
-package oop_003_Amanda.week03.task1
+package oop_003_Amanda.week03.task1_2
 
 class Weapon(
     val name: String,
