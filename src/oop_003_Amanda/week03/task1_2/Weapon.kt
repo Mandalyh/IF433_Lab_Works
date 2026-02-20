@@ -12,6 +12,7 @@ class Weapon(
                     println("Damage tidak boleh negatif!")
                 }
                 value > 1000 -> {
+                    println("Damage terlalu besar! Di-set ke 1000.")
                     field = 1000
                 }
                 else -> {
