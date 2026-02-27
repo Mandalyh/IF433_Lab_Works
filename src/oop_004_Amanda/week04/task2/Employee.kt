@@ -1,4 +1,4 @@
-package oop_004_Amanda.week04
+package oop_004_Amanda.week04.task2
 
 open class Employee(val name: String, val baseSalary: Int) {
 
