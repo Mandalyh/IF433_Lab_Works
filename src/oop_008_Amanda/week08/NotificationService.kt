@@ -1,7 +1,8 @@
 package oop_008_Amanda.week08
 
 class NotificationService {
-    fun sendEmail(EmailAddress: String) {
+
+    fun sendEmail(emailAddress: String) {
         println("Mengirim email ke: $emailAddress")
     }
 

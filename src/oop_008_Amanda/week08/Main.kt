@@ -1,10 +1,10 @@
 package oop_008_Amanda.week08
 
-fun Main() {
+fun main() {
     println("=== TEST SAFE CALLS & ELVIS ===")
     val emptyOrder = Order(null, null)
-
-    val destination = emptyOrder.deliveryDetails?.address?.city?.name ?: "Kota Tidak Diketahui."
+    val destination =
+        emptyOrder.deliveryDetails?.address?.city?.name ?: "Kota Tidak Diketahui."
     println("Tujuan Pengiriman: $destination")
 
     println("\n=== TEST LET BLOCK ===")
@@ -13,6 +13,7 @@ fun Main() {
         val tax = price * 0.11
         "Transaksi Valid. Harga: Rp$price, Pajak: Rp$tax"
     } ?: "Transaksi Invalid: Harga belum di-set!"
+
     println(receipt)
 
     println("\n=== TEST SAFE CASTING ===")
@@ -29,6 +30,7 @@ fun Main() {
             println("Ditemukan teks: ${it.uppercase()}")
         }
     }
+
     val someObject: Any = 100
     val safeString = someObject as? String ?: "Unknown String"
     println("Hasil cast fallback: $safeString")
