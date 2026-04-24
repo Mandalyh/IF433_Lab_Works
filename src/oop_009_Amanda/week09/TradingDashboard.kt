@@ -10,8 +10,11 @@ fun main() {
         TradeLog("ETHUSDT", "LONG", 10, 0.0, "OPEN"),
         TradeLog("XRPUSDT", "LONG", 5, 6.3, "OPEN")
     )
+
     val closedTrades = tradeHistory.filter { it.status == "CLOSED" }
+
     val winningTrades = closedTrades.filter { it.roe > 0 }
+
     val losingTrades = closedTrades.filter { it.roe <= 0 }
 
     val topPerformersString = winningTrades
@@ -32,15 +35,14 @@ fun main() {
 
     println("=== CRYPTO TRADING DASHBOARD ===")
     println()
-    println("TOP PROFIT:")
 
+    println("TOP PROFIT:")
     topPerformersString.forEach {
         println(it)
     }
 
     println()
     println("TOP LOSS:")
-
     worstPerformersString.forEach {
         println(it)
     }
@@ -48,5 +50,4 @@ fun main() {
     println()
     println("TRADED PAIRS:")
     println(uniquePairs)
-
 }
