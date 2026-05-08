@@ -1,7 +1,6 @@
 package oop_010_Amanda.week10.task1
 
 fun main() {
-
     val coinRepo = WalletRepository<Coin>()
 
     coinRepo.add(Coin("BTC", 1.25))
@@ -24,27 +23,22 @@ fun main() {
     }
 
     println("===== SEARCH RESULT =====")
-
-    val searchResult = coinRepo.searchByName("ET")
+    val searchResult = coinRepo.search { it.name.contains("ET", ignoreCase = true) }
 
     searchResult.forEach {
-        println(it.name)
+        println("Found: ${it.name}")
     }
-
     println()
 
     val txRepo = WalletRepository<Transaction>()
-
     txRepo.add(Transaction("TX001", 50000.0))
     txRepo.add(Transaction("TX002", 120000.0))
     txRepo.add(Transaction("TX003", 75000.0))
 
     println("===== TRANSACTIONS =====")
-
     txRepo.getAll().forEach {
         println("Transaction ID: ${it.id}")
         println("Amount: ${it.amount}")
         println()
     }
-
 }
