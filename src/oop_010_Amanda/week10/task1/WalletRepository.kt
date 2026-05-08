@@ -1,4 +1,17 @@
 package oop_010_Amanda.week10.task1
 
-class WalletRepository {
+class WalletRepository<T : Any> {
+    private val items = mutableListOf<T>()
+
+    fun add(item: T) {
+        items.add(item)
+    }
+
+    fun getAll(): List<T> {
+        return items
+    }
+
+    fun search(predicate: (T) -> Boolean): List<T> {
+        return items.filter(predicate)
+    }
 }

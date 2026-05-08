@@ -1,4 +1,3 @@
 package oop_010_Amanda.week10.task1
 
-class NetworkResponse {
-}
+data class ApiResponse<T>(val status: String, val data: T)
