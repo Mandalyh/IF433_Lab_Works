@@ -1,4 +1,3 @@
 package oop_010_Amanda.week10
 
-class MultiBox {
-}
+class PairBox<K,V>(var key: K, var value: V)
