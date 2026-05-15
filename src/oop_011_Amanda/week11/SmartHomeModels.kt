@@ -1,4 +1,4 @@
-package oop_011_Amanda.week11.task1
+package oop_011_Amanda.week11
 
 data class SmartDevice(
     var name: String,
